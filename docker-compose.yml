@@ -1,0 +1,11 @@
+version: "2.2"
+
+services:
+  checker:
+    image: php:7.4-apache
+    container_name: checker_php
+    restart: always
+    volumes:
+        - ./:/var/www/html
+    ports:
+        - "2003:80"
